@@ -8,5 +8,5 @@ build: generate ## Build provider
 generate: ## Generate provider
 	tfplugingen-framework generate resources \
 		--input specification.json \
-		--output internal/awscc \
-		--package awscc
+		--output internal/schemas \
+		--package schemas
