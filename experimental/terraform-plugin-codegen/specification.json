@@ -13,6 +13,41 @@
                         "string": {
                             "computed_optional_required": "required"
                         }
+                    },
+                    {
+                        "name": "attr2",
+                        "int64": {
+                            "computed_optional_required": "computed"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "awscc_service2_thing2",
+            "schema": {
+                "attributes": [
+                    {
+                        "name": "attr1",
+                        "single_nested": {
+                            "computed_optional_required": "required",
+                            "attributes": [
+                                {
+                                    "name": "attr2",
+                                    "single_nested": {
+                                        "computed_optional_required": "required",
+                                        "attributes": [
+                                            {
+                                                "name": "attr3",
+                                                "bool": {
+                                                    "computed_optional_required": "required"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             }

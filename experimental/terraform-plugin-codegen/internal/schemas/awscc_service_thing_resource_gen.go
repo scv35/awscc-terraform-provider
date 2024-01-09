@@ -15,10 +15,14 @@ func AwsccServiceThingResourceSchema(ctx context.Context) schema.Schema {
 			"attr1": schema.StringAttribute{
 				Required: true,
 			},
+			"attr2": schema.Int64Attribute{
+				Computed: true,
+			},
 		},
 	}
 }
 
 type AwsccServiceThingModel struct {
 	Attr1 types.String `tfsdk:"attr1"`
+	Attr2 types.Int64  `tfsdk:"attr2"`
 }
