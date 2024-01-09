@@ -1,6 +1,21 @@
 {
     "provider": {
-      "name": "awscc_gen"
+        "name": "awscc_gen"
     },
-    "version": "0.1"
+    "version": "0.1",
+    "resources": [
+        {
+            "name": "awscc_service_thing",
+            "schema": {
+                "attributes": [
+                    {
+                        "name": "attr1",
+                        "string": {
+                            "computed_optional_required": "required"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
 }
