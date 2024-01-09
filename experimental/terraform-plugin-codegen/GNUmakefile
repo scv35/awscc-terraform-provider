@@ -6,6 +6,7 @@ build: generate ## Build provider
 	$(GO_VER) install
 
 generate: ## Generate provider
-	tfplugingen-framework generate all \
+	tfplugingen-framework generate resources \
 		--input specification.json \
-		--output internal/provider
+		--output internal/awscc \
+		--package awscc

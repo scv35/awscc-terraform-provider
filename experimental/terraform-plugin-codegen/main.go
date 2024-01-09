@@ -7,12 +7,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hashicorp/terraform-provider-awscc/experimental/terraform-plugin-codegen/internal/provider/provider_awscc_gen"
+	"github.com/hashicorp/terraform-provider-awscc/experimental/terraform-plugin-codegen/internal/awscc"
 )
 
 func main() {
 	ctx := context.Background()
-	schema := provider_awscc_gen.AwsccGenProviderSchema(ctx)
+	schema := awscc.AwsccServiceThingResourceSchema(ctx)
 
 	fmt.Printf("%s\n", schema.Description)
 }
