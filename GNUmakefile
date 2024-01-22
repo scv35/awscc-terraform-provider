@@ -53,6 +53,7 @@ tools:
 	cd tools && $(GO_VER) install github.com/golangci/golangci-lint/cmd/golangci-lint
 	cd tools && $(GO_VER) install github.com/pavius/impi/cmd/impi
 	cd tools && $(GO_VER) install github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs
+	cd tools && $(GO_VER) install github.com/hashicorp/terraform-plugin-codegen-framework/cmd/tfplugingen-framework
 
 docs:
 	$(GO_VER) run internal/provider/generators/import-examples/main.go
