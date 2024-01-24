@@ -7,6 +7,7 @@ import (
 	"context"
 	"flag"
 
+	_ "github.com/hashicorp/terraform-plugin-codegen-spec/spec"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-provider-awscc/internal/provider"
 )
