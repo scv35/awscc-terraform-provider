@@ -1,0 +1,21 @@
+{
+	"provider": {
+		"name": "awscc"
+	},
+	"resources": [
+		{
+			"name": "awscc_logs_log_group",
+			"schema": {
+				"attributes": [
+					{
+						"name": "floop",
+						"bool": {
+							"computed_optional_required": "required"
+						}
+					}
+				]
+			}
+		}
+	],
+	"version": "0.1"
+}
