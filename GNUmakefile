@@ -31,6 +31,7 @@ resources:
 
 resources-schemas:
 	rm -f internal/*/*/*_resource_spec.json
+	rm -f internal/*/*/awscc_*_resource_gen.go
 	$(GO_VER) generate internal/provider/resource_schemas.go
 
 schemas:
