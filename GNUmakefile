@@ -29,6 +29,10 @@ resources:
 	rm -f internal/*/*/*_resource_gen_test.go
 	$(GO_VER) generate internal/provider/resources.go
 
+resources-schemas:
+	rm -f internal/*/*/*_resource_spec.json
+	$(GO_VER) generate internal/provider/resource_schemas.go
+
 schemas:
 	$(GO_VER) generate internal/provider/schemas.go
 
