@@ -5,6 +5,7 @@ package common
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"go/format"
 	"os"
@@ -56,6 +57,7 @@ type Destination interface {
 	CreateDirectories() error
 	Write() error
 	WriteBytes(body []byte) error
+	WriteJSON(v any) error
 	WriteTemplate(templateName, templateBody string, templateData any) error
 }
 
@@ -120,6 +122,17 @@ func (d *fileDestination) Write() error {
 
 func (d *fileDestination) WriteBytes(body []byte) error {
 	_, err := d.buffer.Write(body)
+	return err
+}
+
+func (d *fileDestination) WriteJSON(v any) error {
+	bytes, err := json.MarshalIndent(v, "", "\t")
+
+	if err != nil {
+		return err
+	}
+
+	_, err = d.buffer.Write(bytes)
 	return err
 }
 
